@@ -1,0 +1,12 @@
+show login page
+if (login)
+	if(2fa)
+		send sms,
+			if(sms)
+				index
+			else
+				redirec to sms page
+	else
+		index
+else
+	redired to login

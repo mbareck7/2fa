@@ -1,0 +1,231 @@
+!SESSION 2020-07-11 01:05:27.197 -----------------------------------------------
+eclipse.buildId=4.7.0.202006181331-RELEASE
+java.version=1.8.0_212
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -data /lab/dev/2fa -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.ui 2 0 2020-07-11 01:05:29.851
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-11 01:05:29.851
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.jface 2 0 2020-07-11 01:05:31.924
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-07-11 01:05:31.924
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3275a47f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b5af65b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 0 2020-07-11 01:05:36.202
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-11 01:05:36.202
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.buildship.core 2 1 2020-07-11 01:08:17.749
+!MESSAGE Synchronize project app failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: Cannot store preferences in file /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectImportWizardController$5.run(ProjectImportWizardController.java:213)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: Cannot store preferences in file /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs
+	at org.eclipse.buildship.core.internal.configuration.PreferenceStore$PropertiesFilePreferenceStore.flush(PreferenceStore.java:251)
+	at org.eclipse.buildship.core.internal.configuration.BuildConfigurationPersistence.savePreferences(BuildConfigurationPersistence.java:183)
+	at org.eclipse.buildship.core.internal.configuration.BuildConfigurationPersistence.saveBuildConfiguration(BuildConfigurationPersistence.java:72)
+	at org.eclipse.buildship.core.internal.configuration.DefaultConfigurationManager.saveBuildConfiguration(DefaultConfigurationManager.java:103)
+	at org.eclipse.buildship.core.internal.configuration.DefaultConfigurationManager.saveProjectConfiguration(DefaultConfigurationManager.java:140)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.saveProjectConfiguration(ImportRootProjectOperation.java:83)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 9 more
+Caused by: java.io.FileNotFoundException: /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.buildship.core.internal.configuration.PreferenceStore$PropertiesFilePreferenceStore.flush(PreferenceStore.java:246)
+	... 20 more
+
+!ENTRY org.eclipse.buildship.core 2 1 2020-07-11 01:08:17.758
+!MESSAGE Synchronize project app failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: Cannot store preferences in file /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectImportWizardController$5.run(ProjectImportWizardController.java:213)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: Cannot store preferences in file /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs
+	at org.eclipse.buildship.core.internal.configuration.PreferenceStore$PropertiesFilePreferenceStore.flush(PreferenceStore.java:251)
+	at org.eclipse.buildship.core.internal.configuration.BuildConfigurationPersistence.savePreferences(BuildConfigurationPersistence.java:183)
+	at org.eclipse.buildship.core.internal.configuration.BuildConfigurationPersistence.saveBuildConfiguration(BuildConfigurationPersistence.java:72)
+	at org.eclipse.buildship.core.internal.configuration.DefaultConfigurationManager.saveBuildConfiguration(DefaultConfigurationManager.java:103)
+	at org.eclipse.buildship.core.internal.configuration.DefaultConfigurationManager.saveProjectConfiguration(DefaultConfigurationManager.java:140)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.saveProjectConfiguration(ImportRootProjectOperation.java:83)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 9 more
+Caused by: java.io.FileNotFoundException: /lab/dev/2fa/app/.settings/org.eclipse.buildship.core.prefs (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.buildship.core.internal.configuration.PreferenceStore$PropertiesFilePreferenceStore.flush(PreferenceStore.java:246)
+	... 20 more
+
+!ENTRY org.eclipse.buildship.core 2 2 2020-07-11 01:08:33.235
+!MESSAGE Initialize project app, Update preview failed due to an error in the referenced Gradle build.
+!STACK 0
+org.gradle.tooling.BuildException: Could not fetch model of type 'GradleBuild' using Gradle distribution 'https://services.gradle.org/distributions/gradle-6.4.1-bin.zip'.
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:51)
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:29)
+	at org.gradle.tooling.internal.consumer.ResultHandlerAdapter.onFailure(ResultHandlerAdapter.java:43)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor.lambda$run$0(DefaultAsyncConsumerActionExecutor.java:57)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+	at org.gradle.tooling.internal.consumer.BlockingResultHandler.getResult(BlockingResultHandler.java:46)
+	at org.gradle.tooling.internal.consumer.DefaultModelBuilder.get(DefaultModelBuilder.java:51)
+	at org.eclipse.buildship.core.internal.util.gradle.CompatProjectConnection$CompatModelBuilder.get(CompatProjectConnection.java:262)
+	at org.eclipse.buildship.core.internal.util.gradle.IdeAttachedProjectConnection.getModel(IdeAttachedProjectConnection.java:86)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.queryModel(DefaultModelProvider.java:115)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.lambda$null$0(DefaultModelProvider.java:50)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$GradleConnectionOperation.runInToolingApi(DefaultGradleBuild.java:329)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.withConnection(DefaultGradleBuild.java:122)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.lambda$fetchModel$1(DefaultModelProvider.java:49)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.getFromCache(DefaultModelProvider.java:98)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.executeOperation(DefaultModelProvider.java:90)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.fetchModel(DefaultModelProvider.java:48)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectPreviewWizardPage.fetchGradleBuildStructure(ProjectPreviewWizardPage.java:456)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectPreviewWizardPage.access$700(ProjectPreviewWizardPage.java:78)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectPreviewWizardPage$UpdatePreviewOperation.runInToolingApi(ProjectPreviewWizardPage.java:477)
+	at org.eclipse.buildship.core.internal.operation.ToolingApiOperations$1.runInToolingApi(ToolingApiOperations.java:60)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:33)
+	at org.eclipse.buildship.ui.internal.wizard.project.ProjectPreviewWizardPage$4.run(ProjectPreviewWizardPage.java:311)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.gradle.internal.exceptions.LocationAwareException: Could not update timestamp for /lab/dev/2fa/app/.gradle/6.4.1/gc.properties
+	at org.gradle.initialization.exception.DefaultExceptionAnalyser.transform(DefaultExceptionAnalyser.java:103)
+	at org.gradle.initialization.exception.DefaultExceptionAnalyser.collectFailures(DefaultExceptionAnalyser.java:67)
+	at org.gradle.initialization.exception.MultipleBuildFailuresExceptionAnalyser.transform(MultipleBuildFailuresExceptionAnalyser.java:48)
+	at org.gradle.initialization.exception.StackTraceSanitizingExceptionAnalyser.transform(StackTraceSanitizingExceptionAnalyser.java:30)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:48)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:32)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:68)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:55)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:82)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+Caused by: org.gradle.api.UncheckedIOException: Could not update timestamp for /lab/dev/2fa/app/.gradle/6.4.1/gc.properties
+	at org.gradle.util.GFileUtils.touchFileByWritingEmptyByteArray(GFileUtils.java:93)
+	at org.gradle.util.GFileUtils.touchExisting(GFileUtils.java:80)
+	at org.gradle.util.GFileUtils.touch(GFileUtils.java:61)
+	at org.gradle.cache.internal.VersionSpecificCacheCleanupAction.markCleanedUp(VersionSpecificCacheCleanupAction.java:93)
+	at org.gradle.cache.internal.VersionSpecificCacheCleanupAction.performCleanup(VersionSpecificCacheCleanupAction.java:107)
+	at org.gradle.cache.internal.VersionSpecificCacheCleanupAction.execute(VersionSpecificCacheCleanupAction.java:75)
+	at org.gradle.initialization.layout.ProjectCacheDir.stop(ProjectCacheDir.java:56)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.internal.service.DefaultServiceRegistry$ManagedObjectServiceProvider.stop(DefaultServiceRegistry.java:584)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.internal.service.DefaultServiceRegistry$ManagedObjectServiceProvider.stop(DefaultServiceRegistry.java:584)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.internal.service.DefaultServiceRegistry$OwnServices.stop(DefaultServiceRegistry.java:471)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.internal.service.DefaultServiceRegistry$CompositeServiceProvider.stop(DefaultServiceRegistry.java:977)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.internal.service.DefaultServiceRegistry.close(DefaultServiceRegistry.java:260)
+	at org.gradle.internal.concurrent.CompositeStoppable$2.stop(CompositeStoppable.java:90)
+	at org.gradle.internal.concurrent.CompositeStoppable.stop(CompositeStoppable.java:106)
+	at org.gradle.tooling.internal.provider.SessionScopeBuildActionExecuter.execute(SessionScopeBuildActionExecuter.java:73)
+	at org.gradle.tooling.internal.provider.SessionScopeBuildActionExecuter.execute(SessionScopeBuildActionExecuter.java:38)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:37)
+	at org.gradle.tooling.internal.provider.GradleThreadBuildActionExecuter.execute(GradleThreadBuildActionExecuter.java:26)
+	at org.gradle.tooling.internal.provider.ParallelismConfigurationBuildActionExecuter.execute(ParallelismConfigurationBuildActionExecuter.java:43)
+	at org.gradle.tooling.internal.provider.ParallelismConfigurationBuildActionExecuter.execute(ParallelismConfigurationBuildActionExecuter.java:29)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:60)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:55)
+	... 30 more
+Caused by: java.io.FileNotFoundException: /lab/dev/2fa/app/.gradle/6.4.1/gc.properties (Permission denied)
+	at org.gradle.util.GFileUtils.touchFileByWritingEmptyByteArray(GFileUtils.java:90)
+	... 57 more
+
+!ENTRY org.eclipse.ui 2 2 2020-07-11 01:21:10.884
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
